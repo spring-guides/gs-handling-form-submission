@@ -1,8 +1,5 @@
 <#assign project_id="gs-handling-form-submission">
 
-# Getting Started: Handling Form Submission
-
-
 What you'll build
 -----------------
 

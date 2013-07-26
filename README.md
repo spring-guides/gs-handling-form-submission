@@ -1,7 +1,4 @@
 
-# Getting Started: Handling Form Submission
-
-
 What you'll build
 -----------------
 
