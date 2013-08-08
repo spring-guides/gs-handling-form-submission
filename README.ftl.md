@@ -1,9 +1,10 @@
 <#assign project_id="gs-handling-form-submission">
+This guide walks you through creating a web form with Spring.
 
 What you'll build
 -----------------
 
-This guide walks you through creating a web form with Spring. The service will accept HTTP GET requests at:
+The service will accept HTTP GET requests at:
 
     http://localhost:8080/greeting
 
