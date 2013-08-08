@@ -1,4 +1,4 @@
-This guide walks you through creating a web form with Spring.
+This guide walks you through the process of using Spring to create and submit a web form.
 
 What you'll build
 -----------------
@@ -111,7 +111,7 @@ Note to experienced Maven users who are unaccustomed to using an external parent
 Create a web controller
 -----------------------
 
-In Spring's approach to building web sites, HTTP requests are handled by a controller. These components are easily identified by the [`@Controller`] annotation, and the GreetingController below handles GET requests for /greeting by returning the name of a [`View`], in this case, "greeting". A `View` is responsible for rendering the HTML content:
+In Spring's approach to building web sites, HTTP requests are handled by a controller. These components are easily identified by the [`@Controller`] annotation. The GreetingController below handles GET requests for /greeting by returning the name of a [`View`], in this case, "greeting". A `View` is responsible for rendering the HTML content:
 
 `src/main/java/hello/GreetingController.java`
 ```java
@@ -142,11 +142,11 @@ public class GreetingController {
 }
 ```
 
-This controller is concise and simple, but there is plenty happening. Let's analyze it step by step.
+This controller is concise and simple, but a lot is going on. Let's analyze it step by step.
 
-The `@RequestMapping` annotation allows you to map HTTP requests to specific controller methods. The two methods in this controller are both mapped to `/greeting`. By default `@RequestMapping` maps all HTTP operations, i.e. `GET`, `POST`, etc. But in this case the `greetingForm()` method is specifically mapped to `GET` using `@RequestMapping(method=GET)`, while `greetingSubmit()` is mapped to `POST` with `@RequestMapping(method=POST)`. This allows the controller to differentiate the requests to the  `/greeting` endpoint.
+The `@RequestMapping` annotation allows you to map HTTP requests to specific controller methods. The two methods in this controller are both mapped to `/greeting`. By default `@RequestMapping` maps all HTTP operations, such as `GET`, `POST`, and so forth. But in this case the `greetingForm()` method is specifically mapped to `GET` using `@RequestMapping(method=GET)`, while `greetingSubmit()` is mapped to `POST` with `@RequestMapping(method=POST)`. This mapping allows the controller to differentiate the requests to the  `/greeting` endpoint.
 
-The `greetingForm()` method uses a [`Model`] object to expose a new `Greeting` to the view template. The `Greeting` object contains fields, such as `id` and `content` that correspond to the form fields in the `greeting` view, and will be used to capture the information from the form.
+The `greetingForm()` method uses a [`Model`] object to expose a new `Greeting` to the view template. The `Greeting` object contains fields such as `id` and `content` that correspond to the form fields in the `greeting` view, and will be used to capture the information from the form.
 
 `src/main/java/hello/Greeting.java`
 ```java
@@ -176,7 +176,7 @@ public class Greeting {
 }
 ```
 
-The implementation of the method body is relying on a view technology, in this case [Thymeleaf][u-thymeleaf], to perform server-side rendering of the HTML. Thymeleaf parses the `greeting.html` template below and evaluates the various template expressions to render the form.
+The implementation of the method body relies on a view technology, in this case [Thymeleaf][u-thymeleaf], to perform server-side rendering of the HTML. Thymeleaf parses the `greeting.html` template below and evaluates the various template expressions to render the form.
 
 `src/main/resources/templates/greeting.html`
 ```html
@@ -197,7 +197,7 @@ The implementation of the method body is relying on a view technology, in this c
 </html>
 ```
 
-The `th:action="@{/greeting}"` expression directs the form to POST to the `/greeting` endpoint, while the `th:object="${greeting}"` expression declares the model object to use for collecting the form data. The two form fields, expressed with `th:field="*{id}"` and `th:field="*{content}"` correspond to the fields in the `Greeting` object above.
+The `th:action="@{/greeting}"` expression directs the form to POST to the `/greeting` endpoint, while the `th:object="${greeting}"` expression declares the model object to use for collecting the form data. The two form fields, expressed with `th:field="*{id}"` and `th:field="*{content}"`, correspond to the fields in the `Greeting` object above.
 
 That covers the controller, model, and view for presenting the form. Now let's review the process of submitting the form. As noted above, the form submits to the `/greeting` endpoint using a `POST`. The `greetingSubmit()` method receives the `Greeting` object that was populated by the form. It then adds that populated object to the model so the submitted data can be rendered in the view. The `id` is rendered in the `<p th:text="'id: ' + ${greeting.id}" />` expression. Likewise the `content` is rendered in the `<p th:text="'content: ' + ${greeting.content}" />` expression.
 
@@ -218,7 +218,7 @@ That covers the controller, model, and view for presenting the form. Now let's r
 </html>
 ```
 
-For clarity, this example utilizes two separate view templates for rendering the form and displaying the submitted data, however it is certainly possible to use a single view for both purposes.
+For clarity, this example utilizes two separate view templates for rendering the form and displaying the submitted data; however, you can also use a single view for both purposes.
 
 
 Make the application executable
@@ -316,7 +316,7 @@ Submit an id and message to see the results:
 Summary
 -------
 
-Congratulations! You have just submitted a form using Spring.
+Congratulations! You have just used Spring to create and submit a form.
 
 
 [u-war]: /understanding/war
