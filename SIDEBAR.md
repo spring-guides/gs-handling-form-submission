@@ -1,6 +1,6 @@
 ## Related Resources
 
-There's more to building web applications than is covered here. You can continue your exploration of Spring with the following resources.
+There's more to Spring web development than is covered here. You can continue your exploration of Spring with the following resources.
 
 ### Getting Started Guides
 
