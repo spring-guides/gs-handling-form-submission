@@ -3,11 +3,11 @@ This guide walks you through the process of using Spring to create and submit a 
 What you'll build
 -----------------
 
-The service will accept HTTP GET requests at:
+In this guide, you will build a web form which will be accessible at the following URL:
 
     http://localhost:8080/greeting
 
-and respond with a web page displaying a form. You can submit a greeting by populating the `id` and `content` form fields. A results page will be displayed when a form is submitted.
+Viewing this page in a browser will display the form. You can submit a greeting by populating the `id` and `content` form fields. A results page will be displayed when the form is submitted.
 
 
 What you'll need
@@ -146,7 +146,7 @@ This controller is concise and simple, but a lot is going on. Let's analyze it s
 
 The `@RequestMapping` annotation allows you to map HTTP requests to specific controller methods. The two methods in this controller are both mapped to `/greeting`. By default `@RequestMapping` maps all HTTP operations, such as `GET`, `POST`, and so forth. But in this case the `greetingForm()` method is specifically mapped to `GET` using `@RequestMapping(method=GET)`, while `greetingSubmit()` is mapped to `POST` with `@RequestMapping(method=POST)`. This mapping allows the controller to differentiate the requests to the  `/greeting` endpoint.
 
-The `greetingForm()` method uses a [`Model`] object to expose a new `Greeting` to the view template. The `Greeting` object contains fields such as `id` and `content` that correspond to the form fields in the `greeting` view, and will be used to capture the information from the form.
+The `greetingForm()` method uses a [`Model`] object to expose a new `Greeting` to the view template. The `Greeting` object in the following code contains fields such as `id` and `content` that correspond to the form fields in the `greeting` view, and will be used to capture the information from the form.
 
 `src/main/java/hello/Greeting.java`
 ```java
@@ -199,7 +199,7 @@ The implementation of the method body relies on a view technology, in this case 
 
 The `th:action="@{/greeting}"` expression directs the form to POST to the `/greeting` endpoint, while the `th:object="${greeting}"` expression declares the model object to use for collecting the form data. The two form fields, expressed with `th:field="*{id}"` and `th:field="*{content}"`, correspond to the fields in the `Greeting` object above.
 
-That covers the controller, model, and view for presenting the form. Now let's review the process of submitting the form. As noted above, the form submits to the `/greeting` endpoint using a `POST`. The `greetingSubmit()` method receives the `Greeting` object that was populated by the form. It then adds that populated object to the model so the submitted data can be rendered in the view. The `id` is rendered in the `<p th:text="'id: ' + ${greeting.id}" />` expression. Likewise the `content` is rendered in the `<p th:text="'content: ' + ${greeting.content}" />` expression.
+That covers the controller, model, and view for presenting the form. Now let's review the process of submitting the form. As noted above, the form submits to the `/greeting` endpoint using a `POST`. The `greetingSubmit()` method receives the `Greeting` object that was populated by the form. It then adds that populated object to the model so the submitted data can be rendered in the `result` view, seen below. The `id` is rendered in the `<p th:text="'id: ' + ${greeting.id}" />` expression. Likewise the `content` is rendered in the `<p th:text="'content: ' + ${greeting.content}" />` expression.
 
 `src/main/resources/templates/result.html`
 ```html
