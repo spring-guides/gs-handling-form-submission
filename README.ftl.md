@@ -107,10 +107,10 @@ Summary
 Congratulations! You have just used Spring to create and submit a form.
 
 
-[u-war]: /understanding/war
-[u-tomcat]: /understanding/tomcat
+[u-war]: /understanding/WAR
+[u-tomcat]: /understanding/Tomcat
 [u-application-context]: /understanding/application-context
-[u-thymeleaf]: /understanding/thymeleaf
+[u-thymeleaf]: /understanding/Thymeleaf
 [`View`]: http://static.springsource.org/spring/docs/current/javadoc-api/org/springframework/web/servlet/View.html
 [`Model`]: http://static.springsource.org/spring/docs/current/javadoc-api/org/springframework/ui/Model.html
 [`@Configuration`]:http://static.springsource.org/spring/docs/current/javadoc-api/org/springframework/context/annotation/Configuration.html
