@@ -144,7 +144,7 @@ public class GreetingController {
 
     @RequestMapping(value="/greeting", method=RequestMethod.POST)
     public String greetingSubmit(@ModelAttribute Greeting greeting, Model model) {
-    	model.addAttribute("greeting", greeting);
+        model.addAttribute("greeting", greeting);
         return "result";
     }
 
@@ -294,7 +294,7 @@ Now run the following command to produce a single executable JAR file containing
 $ mvn package
 ```
 
-[spring-boot-maven-plugin]: https://github.com/SpringSource/spring-boot/tree/master/spring-boot-maven-plugin
+[spring-boot-maven-plugin]: https://github.com/SpringSource/spring-boot/tree/master/spring-boot-tools/spring-boot-maven-plugin
 
 > **Note:** The procedure above will create a runnable JAR. You can also opt to [build a classic WAR file](/guides/gs/convert-jar-to-war/) instead.
 

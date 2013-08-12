@@ -18,7 +18,7 @@ public class GreetingController {
 
     @RequestMapping(value="/greeting", method=RequestMethod.POST)
     public String greetingSubmit(@ModelAttribute Greeting greeting, Model model) {
-    	model.addAttribute("greeting", greeting);
+        model.addAttribute("greeting", greeting);
         return "result";
     }
 
