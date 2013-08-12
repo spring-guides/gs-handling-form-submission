@@ -52,7 +52,7 @@ The `greetingForm()` method uses a [`Model`] object to expose a new `Greeting` t
 
     <@snippet path="src/main/java/hello/Greeting.java" prefix="complete"/>
 
-The implementation of the method body relies on a view technology, in this case [Thymeleaf][u-thymeleaf], to perform server-side rendering of the HTML. Thymeleaf parses the `greeting.html` template below and evaluates the various template expressions to render the form.
+The implementation of the method body relies on a [view technology][u-view-templates], in this case [Thymeleaf](http://www.thymeleaf.org/doc/html/Thymeleaf-Spring3.html), to perform server-side rendering of the HTML. Thymeleaf parses the `greeting.html` template below and evaluates the various template expressions to render the form.
 
     <@snippet path="src/main/resources/templates/greeting.html" prefix="complete"/>
 
@@ -110,7 +110,7 @@ Congratulations! You have just used Spring to create and submit a form.
 [u-war]: /understanding/WAR
 [u-tomcat]: /understanding/Tomcat
 [u-application-context]: /understanding/application-context
-[u-thymeleaf]: /understanding/Thymeleaf
+[u-view-templates]: /understanding/view-templates
 [`View`]: http://static.springsource.org/spring/docs/current/javadoc-api/org/springframework/web/servlet/View.html
 [`Model`]: http://static.springsource.org/spring/docs/current/javadoc-api/org/springframework/ui/Model.html
 [`@Configuration`]:http://static.springsource.org/spring/docs/current/javadoc-api/org/springframework/context/annotation/Configuration.html
