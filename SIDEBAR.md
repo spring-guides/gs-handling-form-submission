@@ -26,6 +26,6 @@ There's more to creating web content with Spring than what is covered here. You 
 * [REST][u-rest]
 * [JSON][u-json]
 
-<@u_view_templates/>
-<@u_rest/>
-<@u_json/>
+[u-view-templates]: /understanding/view-templates
+[u-rest]: /understanding/REST
+[u-json]: /understanding/JSON
