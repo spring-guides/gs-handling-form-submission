@@ -87,7 +87,7 @@ repositories {
 }
 
 dependencies {
-    compile("org.springframework.boot:spring-boot-starter-web:0.5.0.BUILD-SNAPSHOT")
+    compile("org.springframework.boot:spring-boot-starter-web:0.5.0.M2")
     compile("org.thymeleaf:thymeleaf-spring3:2.0.16")
     testCompile("junit:junit:4.11")
 }
@@ -263,7 +263,7 @@ buildscript {
         mavenLocal()
     }
     dependencies {
-        classpath("org.springframework.boot:spring-boot-gradle-plugin:0.5.0.BUILD-SNAPSHOT")
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:0.5.0.M2")
     }
 }
 ```
@@ -342,6 +342,6 @@ Congratulations! You have just used Spring to create and submit a form.
 [`@ComponentScan`]: http://static.springsource.org/spring/docs/current/javadoc-api/org/springframework/context/annotation/ComponentScan.html
 [`@Component`]: http://static.springsource.org/spring/docs/current/javadoc-api/org/springframework/stereotype/Component.html
 [`@Controller`]: http://static.springsource.org/spring/docs/current/javadoc-api/org/springframework/stereotype/Controller.html
-[`SpringApplication`]: http://static.springsource.org/spring-bootstrap/docs/0.5.0.BUILD-SNAPSHOT/javadoc-api/org/springframework/bootstrap/SpringApplication.html
+[`SpringApplication`]: http://static.springsource.org/spring-bootstrap/docs/0.5.0.M2/javadoc-api/org/springframework/bootstrap/SpringApplication.html
 [`DispatcherServlet`]: http://static.springsource.org/spring/docs/current/javadoc-api/org/springframework/web/servlet/DispatcherServlet.html
-[`@EnableAutoConfiguration`]: http://static.springsource.org/spring-bootstrap/docs/0.5.0.BUILD-SNAPSHOT/javadoc-api/org/springframework/bootstrap/context/annotation/SpringApplication.html
+[`@EnableAutoConfiguration`]: http://static.springsource.org/spring-bootstrap/docs/0.5.0.M2/javadoc-api/org/springframework/bootstrap/context/annotation/SpringApplication.html
