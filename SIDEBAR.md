@@ -19,6 +19,7 @@ There's more to creating web content with Spring than what is covered here. You 
 * [REST Tutorial][tut-rest]
 
 [tut-rest]: /guides/tutorials/rest
+[tut-web]: /guides/tutorials/web
 
 ### Concepts and technologies
 
