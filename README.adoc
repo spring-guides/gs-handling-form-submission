@@ -26,6 +26,7 @@ Viewing this page in a browser will display the form. You can submit a greeting 
 
 == What you'll need
 
+:java_version: 1.7
 include::https://raw.githubusercontent.com/spring-guides/getting-started-macros/master/prereq_editor_jdk_buildtools.adoc[]
 
 
