@@ -129,3 +129,6 @@ image::images/result.png[Result]
 Congratulations! You have just used Spring to create and submit a form.
 
 
+
+include::https://raw.githubusercontent.com/spring-guides/getting-started-macros/master/footer.adoc[]
+
