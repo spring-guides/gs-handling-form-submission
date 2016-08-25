@@ -54,7 +54,7 @@ include::complete/src/main/java/hello/GreetingController.java[]
 
 This controller is concise and simple, but a lot is going on. Let's analyze it step by step.
 
-The `@RequestMapping` annotation allows you to map HTTP requests to specific controller methods. The two methods in this controller are both mapped to `/greeting`. By default `@RequestMapping` maps all HTTP operations, such as `GET`, `POST`, and so forth. But in this case the `greetingForm()` method is specifically mapped to `GET` using `@RequestMapping(method=GET)`, while `greetingSubmit()` is mapped to `POST` with `@RequestMapping(method=POST)`. This mapping allows the controller to differentiate the requests to the  `/greeting` endpoint.
+The mapping annotations allows you to map HTTP requests to specific controller methods. The two methods in this controller are both mapped to `/greeting`. You can use `@RequestMapping` which by default maps all HTTP operations, such as `GET`, `POST`, and so forth. But in this case the `greetingForm()` method is specifically mapped to `GET` using `@GetMapping`, while `greetingSubmit()` is mapped to `POST` with `@PostMapping`. This mapping allows the controller to differentiate the requests to the  `/greeting` endpoint.
 
 The `greetingForm()` method uses a {Model}[`Model`] object to expose a new `Greeting` to the view template. The `Greeting` object in the following code contains fields such as `id` and `content` that correspond to the form fields in the `greeting` view, and will be used to capture the information from the form.
 
@@ -64,7 +64,7 @@ The `greetingForm()` method uses a {Model}[`Model`] object to expose a new `Gree
 include::complete/src/main/java/hello/Greeting.java[]
 ----
 
-The implementation of the method body relies on a link:/understanding/view-templates[view technology], in this case http://www.thymeleaf.org/doc/html/Thymeleaf-Spring3.html[Thymeleaf], to perform server-side rendering of the HTML. Thymeleaf parses the `greeting.html` template below and evaluates the various template expressions to render the form.
+The implementation of the method body relies on a link:/understanding/view-templates[view technology] to perform server-side rendering of the HTML by converting the view name "greeting" into a template to render. In this case we are using http://www.thymeleaf.org/doc/html/Thymeleaf-Spring3.html[Thymeleaf], which parses the `greeting.html` template below and evaluates the various template expressions to render the form.
 
 `src/main/resources/templates/greeting.html`
 [source,html]
@@ -74,7 +74,7 @@ include::complete/src/main/resources/templates/greeting.html[]
 
 The `th:action="@{/greeting}"` expression directs the form to POST to the `/greeting` endpoint, while the `th:object="${greeting}"` expression declares the model object to use for collecting the form data. The two form fields, expressed with `th:field="*{id}"` and `th:field="*{content}"`, correspond to the fields in the `Greeting` object above.
 
-That covers the controller, model, and view for presenting the form. Now let's review the process of submitting the form. As noted above, the form submits to the `/greeting` endpoint using a `POST`. The `greetingSubmit()` method receives the `Greeting` object that was populated by the form. It then adds that populated object to the model so the submitted data can be rendered in the `result` view, seen below. The `id` is rendered in the `<p th:text="'id: ' + ${greeting.id}" />` expression. Likewise the `content` is rendered in the `<p th:text="'content: ' + ${greeting.content}" />` expression.
+That covers the controller, model, and view for presenting the form. Now let's review the process of submitting the form. As noted above, the form submits to the `/greeting` endpoint using a `POST`. The `greetingSubmit()` method receives the `Greeting` object that was populated by the form. The `Greeting` is a `@ModelAttribute` so it is bound to the incoming form content, and also the submitted data can be rendered in the `result` view by referring to it by name (the name of the method parameter by default, so "greeting" in this case). The `id` is rendered in the `<p th:text="'id: ' + ${greeting.id}" />` expression. Likewise the `content` is rendered in the `<p th:text="'content: ' + ${greeting.content}" />` expression.
 
 `src/main/resources/templates/result.html`
 [source,html]
@@ -82,7 +82,7 @@ That covers the controller, model, and view for presenting the form. Now let's r
 include::complete/src/main/resources/templates/result.html[]
 ----
 
-For clarity, this example utilizes two separate view templates for rendering the form and displaying the submitted data; however, you can also use a single view for both purposes.
+For clarity, this example uses two separate view templates for rendering the form and displaying the submitted data; however, you can also use a single view for both purposes.
 
 
 == Make the application executable
