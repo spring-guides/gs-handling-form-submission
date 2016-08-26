@@ -1,6 +1,6 @@
 ---
-tags: []
-projects: []
+tags: [form,mvc]
+projects: [spring-framework,spring-boot]
 ---
 :spring_version: current
 :spring_boot_version: 1.4.0.RELEASE
@@ -127,7 +127,6 @@ image::images/result.png[Result]
 == Summary
 
 Congratulations! You have just used Spring to create and submit a form.
-
 
 
 include::https://raw.githubusercontent.com/spring-guides/getting-started-macros/master/footer.adoc[]
