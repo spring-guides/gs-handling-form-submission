@@ -11,13 +11,12 @@ public class GreetingController {
 
     @GetMapping("/greeting")
     public String greetingForm(Model model) {
-        model.addAttribute("greeting", new Greeting());
-        return "greeting";
+        model.addAttribute("greeting_attribute", new GreetingClass());
+        return "greeting_template";
     }
 
     @PostMapping("/greeting")
-    public String greetingSubmit(@ModelAttribute Greeting greeting) {
+    public String greetingSubmit(@ModelAttribute GreetingClass greetingClass) {
         return "result";
     }
-
 }

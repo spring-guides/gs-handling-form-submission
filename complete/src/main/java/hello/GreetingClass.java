@@ -1,6 +1,6 @@
 package hello;
 
-public class Greeting {
+public class GreetingClass {
 
     private long id;
     private String content;
