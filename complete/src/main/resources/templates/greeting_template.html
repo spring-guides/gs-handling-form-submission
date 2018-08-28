@@ -6,7 +6,7 @@
 </head>
 <body>
 <h1>Form</h1>
-<form action="#" th:action="@{/greetingClass}" th:object="${greeting_attribute}" method="post">
+<form action="#" th:action="@{/greeting}" th:object="${greeting_attribute}" method="post">
     <p>Id: <input type="number" th:field="*{id}"/></p>
     <p>Message: <input type="text" th:field="*{content}"/></p>
     <p><input type="submit" value="Submit"/> <input type="reset" value="Reset"/></p>
