@@ -1,10 +1,10 @@
 :spring_version: current
 :spring_boot_version: 1.5.10.RELEASE
-:Controller: http://docs.spring.io/spring/docs/{spring_version}/javadoc-api/org/springframework/stereotype/Controller.html
-:DispatcherServlet: http://docs.spring.io/spring/docs/{spring_version}/javadoc-api/org/springframework/web/servlet/DispatcherServlet.html
-:SpringApplication: http://docs.spring.io/spring-boot/docs/{spring_boot_version}/api/org/springframework/boot/SpringApplication.html
-:View: http://docs.spring.io/spring/docs/{spring_version}/javadoc-api/org/springframework/web/servlet/View.html
-:Model: http://docs.spring.io/spring/docs/{spring_version}/javadoc-api/org/springframework/ui/Model.html
+:Controller: https://docs.spring.io/spring/docs/{spring_version}/javadoc-api/org/springframework/stereotype/Controller.html
+:DispatcherServlet: https://docs.spring.io/spring/docs/{spring_version}/javadoc-api/org/springframework/web/servlet/DispatcherServlet.html
+:SpringApplication: https://docs.spring.io/spring-boot/docs/{spring_boot_version}/api/org/springframework/boot/SpringApplication.html
+:View: https://docs.spring.io/spring/docs/{spring_version}/javadoc-api/org/springframework/web/servlet/View.html
+:Model: https://docs.spring.io/spring/docs/{spring_version}/javadoc-api/org/springframework/ui/Model.html
 :toc:
 :icons: font
 :source-highlighter: prettify
@@ -103,7 +103,7 @@ include::complete/src/main/java/com/example/handlingformsubmission/Greeting.java
 
 The implementation of the method body relies on a view technology to perform server-side
 rendering of the HTML by converting the view name (`greeting`) into a template to render.
-In this case, we use http://www.thymeleaf.org/doc/html/Thymeleaf-Spring3.html[Thymeleaf],
+In this case, we use https://www.thymeleaf.org/doc/html/Thymeleaf-Spring3.html[Thymeleaf],
 which parses the `greeting.html` template and evaluates the various template expressions
 to render the form. The following listing (from
 `src/main/resources/templates/greeting.html`) shows the `greeting` template:
