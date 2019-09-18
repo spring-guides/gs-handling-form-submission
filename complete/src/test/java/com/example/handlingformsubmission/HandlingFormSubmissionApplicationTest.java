@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package hello;
+package com.example.handlingformsubmission;
 
 import static org.hamcrest.Matchers.containsString;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
@@ -32,7 +32,7 @@ import org.springframework.test.web.servlet.MockMvc;
 @RunWith(SpringRunner.class)
 @WebMvcTest(GreetingController.class)
 @TestPropertySource(properties = "logging.level.org.springframework.web=DEBUG")
-public class ApplicationTest {
+public class HandlingFormSubmissionApplicationTest {
 
     @Autowired
     private MockMvc mockMvc;
