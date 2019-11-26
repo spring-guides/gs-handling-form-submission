@@ -72,7 +72,7 @@ requests for `/greeting` by returning the name of a {View}[`View`] (in this case
 `greeting`). The following `View` is responsible for rendering the HTML content:
 
 ====
-[source,java]
+[source,java,tabsize=2]
 ----
 include::complete/src/main/java/com/example/handlingformsubmission/GreetingController.java[]
 ----
@@ -95,7 +95,7 @@ the view template. The `Greeting` object in the following code (from
 to capture the information from the form:
 
 ====
-[source,java]
+[source,java,tabsize=2]
 ----
 include::complete/src/main/java/com/example/handlingformsubmission/Greeting.java[]
 ----
@@ -154,7 +154,7 @@ listing (from
 shows the application class:
 
 ====
-[source,java]
+[source,java,tabsize=2]
 ----
 include::complete/src/main/java/com/example/handlingformsubmission/HandlingFormSubmissionApplication.java[]
 ----

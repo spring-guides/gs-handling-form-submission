@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *      http://www.apache.org/licenses/LICENSE-2.0
+ *	  http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -34,20 +34,20 @@ import org.springframework.test.web.servlet.MockMvc;
 @TestPropertySource(properties = "logging.level.org.springframework.web=DEBUG")
 public class HandlingFormSubmissionApplicationTest {
 
-    @Autowired
-    private MockMvc mockMvc;
+	@Autowired
+	private MockMvc mockMvc;
 
-    @Test
-    public void rendersForm() throws Exception {
-        mockMvc.perform(get("/greeting"))
-                .andExpect(content().string(containsString("Form")));
-    }
+	@Test
+	public void rendersForm() throws Exception {
+		mockMvc.perform(get("/greeting"))
+				.andExpect(content().string(containsString("Form")));
+	}
 
-    @Test
-    public void submitsForm() throws Exception {
-        mockMvc.perform(post("/greeting").param("id", "12345").param("content", "Hello"))
-                .andExpect(content().string(containsString("Result")))
-                .andExpect(content().string(containsString("id: 12345")));
-    }
+	@Test
+	public void submitsForm() throws Exception {
+		mockMvc.perform(post("/greeting").param("id", "12345").param("content", "Hello"))
+				.andExpect(content().string(containsString("Result")))
+				.andExpect(content().string(containsString("id: 12345")));
+	}
 
 }

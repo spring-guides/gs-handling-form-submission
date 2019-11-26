@@ -9,15 +9,15 @@ import org.springframework.web.bind.annotation.PostMapping;
 @Controller
 public class GreetingController {
 
-    @GetMapping("/greeting")
-    public String greetingForm(Model model) {
-        model.addAttribute("greeting", new Greeting());
-        return "greeting";
-    }
+	@GetMapping("/greeting")
+	public String greetingForm(Model model) {
+		model.addAttribute("greeting", new Greeting());
+		return "greeting";
+	}
 
-    @PostMapping("/greeting")
-    public String greetingSubmit(@ModelAttribute Greeting greeting) {
-        return "result";
-    }
+	@PostMapping("/greeting")
+	public String greetingSubmit(@ModelAttribute Greeting greeting) {
+		return "result";
+	}
 
 }
