@@ -184,4 +184,11 @@ image::images/result.png[Result]
 
 Congratulations! You have just used Spring to create and submit a form.
 
+== See Also
+
+The following guides may also be helpful:
+
+* https://spring.io/guides/gs/validating-form-input/[Validating Form Input]
+* https://spring.io/guides/gs/uploading-files/[Uploading Files]
+
 include::https://raw.githubusercontent.com/spring-guides/getting-started-macros/master/footer.adoc[]
