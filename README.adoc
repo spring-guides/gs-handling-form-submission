@@ -1,5 +1,5 @@
 :spring_version: current
-:spring_boot_version: 2.3.2.RELEASE
+:spring_boot_version: 2.4.2
 :Controller: https://docs.spring.io/spring/docs/{spring_version}/javadoc-api/org/springframework/stereotype/Controller.html
 :DispatcherServlet: https://docs.spring.io/spring/docs/{spring_version}/javadoc-api/org/springframework/web/servlet/DispatcherServlet.html
 :SpringApplication: https://docs.spring.io/spring-boot/docs/{spring_boot_version}/api/org/springframework/boot/SpringApplication.html
@@ -23,7 +23,7 @@ populating the `id` and `content` form fields. A results page will be displayed 
 
 == What You Need
 
-:java_version: 1.8
+:java_version: 11
 include::https://raw.githubusercontent.com/spring-guides/getting-started-macros/master/prereq_editor_jdk_buildtools.adoc[]
 
 include::https://raw.githubusercontent.com/spring-guides/getting-started-macros/master/how_to_complete_this_guide.adoc[]
@@ -36,6 +36,7 @@ Initializr]. The Initializr offers a fast way to pull in all the dependencies yo
 an application and does a lot of the set up for you. This example needs the Spring Web and
 Thymeleaf dependencies.
 
+You can get a Maven build file with the necessary dependencies directly from the https://start.spring.io/#!type=maven-project&language=java&platformVersion=2.4.2.RELEASE&packaging=jar&jvmVersion=11&groupId=com.example&artifactId=handling-form-submission&name=handling-form-submission&description=Demo%20project%20for%20Spring%20Boot&packageName=com.example.handling-form-submission&dependencies=web,thymeleaf[Spring Initializr].
 The following listing shows the `pom.xml` file that is created when you choose Maven:
 
 ====
@@ -45,6 +46,7 @@ include::initial/pom.xml[]
 ----
 ====
 
+You can get a Gradle build file with the necessary dependencies directly from the https://start.spring.io/#!type=gradle-project&language=java&platformVersion=2.4.2.RELEASE&packaging=jar&jvmVersion=11&groupId=com.example&artifactId=handling-form-submission&name=handling-form-submission&description=Demo%20project%20for%20Spring%20Boot&packageName=com.example.handling-form-submission&dependencies=web,thymeleaf[Spring Initializr].
 The following listing shows the `build.gradle` file that is created when you choose Gradle:
 
 ====
