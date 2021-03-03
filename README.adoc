@@ -5,6 +5,7 @@
 :SpringApplication: https://docs.spring.io/spring-boot/docs/{spring_boot_version}/api/org/springframework/boot/SpringApplication.html
 :View: https://docs.spring.io/spring/docs/{spring_version}/javadoc-api/org/springframework/web/servlet/View.html
 :Model: https://docs.spring.io/spring/docs/{spring_version}/javadoc-api/org/springframework/ui/Model.html
+:images: https://raw.githubusercontent.com/spring-guides/gs-handling-form-submission/master/images
 :toc:
 :icons: font
 :source-highlighter: prettify
@@ -169,11 +170,11 @@ Logging output is displayed. The service should be up and running within a few s
 Now that the web site is running, visit http://localhost:8080/greeting, where you see the
 following form:
 
-image::images/form.png[Form]
+image::{images}/form.png[Form]
 
 Submit an ID and message to see the results:
 
-image::images/result.png[Result]
+image::{images}/result.png[Result]
 
 == Summary
 
