@@ -5,7 +5,7 @@
 :SpringApplication: https://docs.spring.io/spring-boot/docs/{spring_boot_version}/api/org/springframework/boot/SpringApplication.html
 :View: https://docs.spring.io/spring/docs/{spring_version}/javadoc-api/org/springframework/web/servlet/View.html
 :Model: https://docs.spring.io/spring/docs/{spring_version}/javadoc-api/org/springframework/ui/Model.html
-:images: https://raw.githubusercontent.com/spring-guides/gs-handling-form-submission/master/images
+:images: https://raw.githubusercontent.com/spring-guides/gs-handling-form-submission/main/images
 :toc:
 :icons: font
 :source-highlighter: prettify
@@ -25,9 +25,9 @@ populating the `id` and `content` form fields. A results page will be displayed 
 == What You Need
 
 :java_version: 11
-include::https://raw.githubusercontent.com/spring-guides/getting-started-macros/master/prereq_editor_jdk_buildtools.adoc[]
+include::https://raw.githubusercontent.com/spring-guides/getting-started-macros/main/prereq_editor_jdk_buildtools.adoc[]
 
-include::https://raw.githubusercontent.com/spring-guides/getting-started-macros/master/how_to_complete_this_guide.adoc[]
+include::https://raw.githubusercontent.com/spring-guides/getting-started-macros/main/how_to_complete_this_guide.adoc[]
 
 [[scratch]]
 == Starting with Spring Initializr
@@ -166,11 +166,11 @@ include::complete/src/main/java/com/example/handlingformsubmission/HandlingFormS
 ----
 ====
 
-include::https://raw.githubusercontent.com/spring-guides/getting-started-macros/master/spring-boot-application-new-path.adoc[]
+include::https://raw.githubusercontent.com/spring-guides/getting-started-macros/main/spring-boot-application-new-path.adoc[]
 
-include::https://raw.githubusercontent.com/spring-guides/getting-started-macros/master/build_an_executable_jar_subhead.adoc[]
+include::https://raw.githubusercontent.com/spring-guides/getting-started-macros/main/build_an_executable_jar_subhead.adoc[]
 
-include::https://raw.githubusercontent.com/spring-guides/getting-started-macros/master/build_an_executable_jar_with_both.adoc[]
+include::https://raw.githubusercontent.com/spring-guides/getting-started-macros/main/build_an_executable_jar_with_both.adoc[]
 
 Logging output is displayed. The service should be up and running within a few seconds.
 
@@ -197,4 +197,4 @@ The following guides may also be helpful:
 * https://spring.io/guides/gs/validating-form-input/[Validating Form Input]
 * https://spring.io/guides/gs/uploading-files/[Uploading Files]
 
-include::https://raw.githubusercontent.com/spring-guides/getting-started-macros/master/footer.adoc[]
+include::https://raw.githubusercontent.com/spring-guides/getting-started-macros/main/footer.adoc[]
