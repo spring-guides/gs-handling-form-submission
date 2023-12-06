@@ -1,8 +1,6 @@
 :spring_version: current
 :spring_boot_version: current
 :Controller: https://docs.spring.io/spring/docs/{spring_version}/javadoc-api/org/springframework/stereotype/Controller.html
-:DispatcherServlet: https://docs.spring.io/spring/docs/{spring_version}/javadoc-api/org/springframework/web/servlet/DispatcherServlet.html
-:SpringApplication: https://docs.spring.io/spring-boot/docs/{spring_boot_version}/api/org/springframework/boot/SpringApplication.html
 :View: https://docs.spring.io/spring/docs/{spring_version}/javadoc-api/org/springframework/web/servlet/View.html
 :Model: https://docs.spring.io/spring/docs/{spring_version}/javadoc-api/org/springframework/ui/Model.html
 :images: https://raw.githubusercontent.com/spring-guides/gs-handling-form-submission/main/images
@@ -13,7 +11,7 @@
 
 This guide walks you through the process of using Spring to create and submit a web form.
 
-== What You Will build
+== What You Will Build
 
 In this guide, you will build a web form, which will be accessible at the following URL:
 `http://localhost:8080/greeting`
