@@ -100,8 +100,8 @@ include::complete/src/main/resources/templates/greeting.html[]
 
 The `th:action="@{/greeting}"` expression directs the form to POST to the `/greeting`
 endpoint, while the `th:object="${greeting}"` expression declares the model object to use
-for collecting the form data. The two form fields, expressed with `th:field="*{id}"` and
-`th:field="*{content}"`, correspond to the fields in the `Greeting` object.
+for collecting the form data. The two form fields, expressed with `th:field="+*+{id}"` and
+`th:field="+*+{content}"`, correspond to the fields in the `Greeting` object.
 
 That covers the controller, model, and view for presenting the form. Now we can review the
 process of submitting the form. As noted earlier, the form submits to the `/greeting`
