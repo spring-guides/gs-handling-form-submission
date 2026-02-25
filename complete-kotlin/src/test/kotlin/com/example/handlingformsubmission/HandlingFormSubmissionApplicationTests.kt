@@ -6,27 +6,28 @@ import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.webmvc.test.autoconfigure.WebMvcTest
 import org.springframework.test.context.TestPropertySource
 import org.springframework.test.web.servlet.MockMvc
-import org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get
-import org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post
-import org.springframework.test.web.servlet.result.MockMvcResultMatchers.content
+import org.springframework.test.web.servlet.get
+import org.springframework.test.web.servlet.post
 
 @WebMvcTest(GreetingController::class)
 @TestPropertySource(properties = ["logging.level.org.springframework.web=DEBUG"])
 class HandlingFormSubmissionApplicationTests {
 
     @Autowired
-    private lateinit var mockMvc: MockMvc
+    lateinit var mockMvc: MockMvc
 
     @Test
     fun rendersForm() {
-        mockMvc.perform(get("/greeting"))
-            .andExpect(content().string(containsString("Form")))
+        mockMvc.get("/greeting")
+            .andExpect { content { string(containsString("Form")) } }
     }
 
     @Test
     fun submitsForm() {
-        mockMvc.perform(post("/greeting").param("id", "12345").param("content", "Hello"))
-            .andExpect(content().string(containsString("Result")))
-            .andExpect(content().string(containsString("id: 12345")))
+        mockMvc.post("/greeting") {
+            param("id", "12345")
+            param("content", "Hello")
+        }.andExpect { content { string(containsString("Result")) } }
+            .andExpect { content { string(containsString("id: 12345")) } }
     }
 }
