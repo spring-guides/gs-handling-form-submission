@@ -29,7 +29,7 @@ include::https://raw.githubusercontent.com/spring-guides/getting-started-macros/
 [[scratch]]
 == Starting with Spring Initializr
 
-You can use this https://start.spring.io/#!type=maven-project&groupId=com.example&artifactId=handling-form-submission&name=handling-form-submission&description=Demo%20project%20for%20Spring%20Boot&packageName=com.example.handling-form-submission&dependencies=web,thymeleaf[pre-initialized project] and click Generate to download a ZIP file. This project is configured to fit the examples in this tutorial.
+You can use this https://start.spring.io/#!type=gradle-project&jvmVersion=17&packaging=jar&groupId=com.example&artifactId=handling-form-submission&packageName=com.example.handlingformsubmission&dependencies=web,thymeleaf[pre-initialized project] and click Generate to download a ZIP file. This project is configured to fit the examples in this tutorial.
 
 To manually initialize the project:
 
@@ -53,7 +53,6 @@ These components are easily identified by the {Controller}[`@Controller`] annota
 requests for `/greeting` by returning the name of a {View}[`View`] (in this case,
 `greeting`). The following `View` is responsible for rendering the HTML content:
 
-====
 [source,java,indent=0,subs="verbatim,quotes",role="primary"]
 .Java
 ----
@@ -64,7 +63,6 @@ include::complete/src/main/java/com/example/handlingformsubmission/GreetingContr
 ----
 include::complete-kotlin/src/main/kotlin/com/example/handlingformsubmission/GreetingController.kt[]
 ----
-====
 
 This controller is concise and simple, but a lot is going on. The rest of this section
 analyzes it step by step.
@@ -81,7 +79,6 @@ the view template. The `Greeting` object in the following code contains fields s
 `id` and `content` that correspond to the form fields in the `greeting` view and are used
 to capture the information from the form:
 
-====
 [source,java,indent=0,subs="verbatim,quotes",role="primary"]
 .Java
 ----
@@ -92,11 +89,10 @@ include::complete/src/main/java/com/example/handlingformsubmission/Greeting.java
 ----
 include::complete-kotlin/src/main/kotlin/com/example/handlingformsubmission/Greeting.kt[]
 ----
-====
 
 The implementation of the method body relies on a view technology to perform server-side
 rendering of the HTML by converting the view name (`greeting`) into a template to render.
-In this case, we use https://www.thymeleaf.org/doc/html/Thymeleaf-Spring3.html[Thymeleaf],
+In this case, we use https://www.thymeleaf.org/doc/tutorials/3.1/thymeleafspring.html[Thymeleaf],
 which parses the `greeting.html` template and evaluates the various template expressions
 to render the form. The following listing shows the `greeting` template:
 
@@ -143,7 +139,6 @@ Along the way, you use Spring's support for embedding the Tomcat servlet
 container as the HTTP runtime, instead of deploying to an external instance. The following
 listing shows the application class:
 
-====
 [source,java,indent=0,subs="verbatim,quotes",role="primary"]
 .Java
 ----
@@ -154,7 +149,6 @@ include::complete/src/main/java/com/example/handlingformsubmission/HandlingFormS
 ----
 include::complete-kotlin/src/main/kotlin/com/example/handlingformsubmission/HandlingFormSubmissionApplication.kt[]
 ----
-====
 
 include::https://raw.githubusercontent.com/spring-guides/getting-started-macros/main/spring-boot-application-new-path.adoc[]
 

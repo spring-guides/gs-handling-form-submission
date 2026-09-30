@@ -11,15 +11,13 @@ import org.springframework.test.web.servlet.post
 
 @WebMvcTest(GreetingController::class)
 @TestPropertySource(properties = ["logging.level.org.springframework.web=DEBUG"])
-class HandlingFormSubmissionApplicationTests {
-
-    @Autowired
-    lateinit var mockMvc: MockMvc
+class HandlingFormSubmissionApplicationTest(@Autowired private val mockMvc: MockMvc) {
 
     @Test
     fun rendersForm() {
-        mockMvc.get("/greeting")
-            .andExpect { content { string(containsString("Form")) } }
+        mockMvc.get("/greeting").andExpect {
+            content { string(containsString("Form")) }
+        }
     }
 
     @Test
@@ -27,7 +25,9 @@ class HandlingFormSubmissionApplicationTests {
         mockMvc.post("/greeting") {
             param("id", "12345")
             param("content", "Hello")
-        }.andExpect { content { string(containsString("Result")) } }
-            .andExpect { content { string(containsString("id: 12345")) } }
+        }.andExpect {
+            content { string(containsString("Result")) }
+            content { string(containsString("id: 12345")) }
+        }
     }
 }
